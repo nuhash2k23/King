@@ -26,10 +26,10 @@ function App() {
 
   
 
-    <ScrollControls distance={14} pages={3.15} damping={0.7}>
-     <SpotLight intensity={50} color={"blue"} position={[-8,11,14]} />   
+    <ScrollControls distance={14} pages={3.15} damping={0.56}>
+     <SpotLight intensity={10} color={"white"} position={[-8,11,14]} />   
     
-     <ambientLight intensity={5} color={"RED"}/> 
+     <ambientLight intensity={3.05} color={"ORANGERED"} /> 
      <Suspense fallback={<Loader/>}>
      <Model />
      </Suspense>
