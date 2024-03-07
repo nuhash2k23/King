@@ -4,10 +4,61 @@ html,body, #root{
   top:0;
   left:0;
   width: 100%;
+
   
   height: 100%;
-  background-image: url('../public/ff.jpg'); 
-  mix-blend-mode:normal; 
+  background-image: url('../public/bg.png'); 
+
   background-size: cover;
   background-repeat: no-repeat;
 }
+.wrapper{
+  display: flex;
+  padding-top:30px;
+  padding-bottom:30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.d{
+ 
+
+
+  background-repeat: no-repeat;
+  background-size: contain;
+width:100vw;
+text-align: center;
+position: absolute;
+
+font-family: Poppins;
+color: orangered;
+font-size: 2.96rem;
+font-weight: 800;
+height: 10vh;
+transform: translateX(-20px);
+padding-top:20px;
+z-index: 999;
+  background: transparent;
+}
+@media(max-width:800px){
+  .d{
+    transform: translateX(0px);
+  }
+  
+html,body, #root{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+
+  
+  height: 100%;
+  background-image: url('../public/bg.png'); 
+
+  background-size: cover;
+  background-position: -400px 0px;
+  background-repeat: no-repeat;
+}
+}
+

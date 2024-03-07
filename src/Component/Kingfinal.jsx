@@ -1,9 +1,10 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import { PerspectiveCamera, SpotLight, useGLTF, useScroll } from '@react-three/drei';
 import gsap from 'gsap';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useThree } from '@react-three/fiber';
 
 export function Model(props) {
+  const { size } = useThree();
   const group = useRef();
   const tl = useRef();
   const camera = useRef();
@@ -36,14 +37,15 @@ export function Model(props) {
   }, []);
   
   
-  
+  const fov = size.width >= 1024 ? 30 : 35;
+  const offset = size.width >= 1024 ? -0.1: 0.4;
 
   return (
     <group {...props} dispose={null} >
       <group name="Scene">
         <ambientLight intensity={1}/>
         <pointLight intensity={1.9} position={[.51, 1.40, 1]} />
-        <PerspectiveCamera makeDefault={true} far={1000} near={.0001} fov={35.361} position={[-5.483, -0.93, 0]} rotation={[0.786, -1.506, 0.785]} scale={6.039} ref={camera} />
+        <PerspectiveCamera makeDefault={true} far={1000} near={.0001} fov={fov} position={[-5.483, -0.93, offset]} rotation={[0.786, -1.506, 0.785]} scale={6.039} ref={camera} />
         <mesh ref={group} name="KING" geometry={nodes.KING.geometry} material={materials.Material_0} position={[0, -1.40, 0]} scale={2.999} >
 
           </mesh>

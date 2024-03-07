@@ -8,6 +8,14 @@ import { Canvas } from '@react-three/fiber';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <React.StrictMode>
+  
+<div className='li'>
+  <li>主页 </li>
+  <li>关于 </li>
+  <li>旅程 </li>
+  <li>活动 </li>
+  <li>档案 </li>
+  </div>
     <Canvas>
     <App />
     </Canvas>
