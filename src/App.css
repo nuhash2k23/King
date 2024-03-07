@@ -99,7 +99,7 @@ transform:translate(-50px, 100px);
         filter: drop-shadow(0px 0px 4px black);
     }   
     .h2{
-        transform:translate(20px, 00px) scale(.76);
+        transform:translate(20px, -30px) scale(.76);
         font-size: 1.7em;
         color: aliceblue;
         text-shadow: 6px 5px 3px wheat;
